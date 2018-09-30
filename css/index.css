@@ -1,0 +1,860 @@
+@font-face{
+    src: url('fonts/dodge/DODGE.ttf');
+    font-family: dodge;
+}
+
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.layers{
+    width: 100%;
+    height: 100%;
+}
+
+/**layer 1**/
+.layer1
+{
+    z-index: 1;
+    background-color: white;
+    position: absolute;
+}
+
+/*scroll*/
+/*start*/
+@keyframes infiniscroll
+{
+    from
+    {
+        top: 0%;
+    }
+    to
+    {
+        top: 100%;
+    }
+}
+/*end*/
+/*scroll*/
+
+.above-columns{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.mobile-monitor-slideshow{
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    height: 100%;
+    background-color: transparent;
+}
+
+.bg-img{
+    width: 90%;
+    position: absolute;
+    height: auto;
+    top: 0%;
+    bottom: 70%;
+    left: 5%;
+    right: 5%;
+}
+
+.mobile-monitor{
+    width: 100%;
+    position: absolute;
+}
+
+.quote{
+    font-weight: 900;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-size: 1.5vh;
+    position: absolute;
+    top: 40%;
+    box-sizing: border-box;
+    padding: 7%;
+    text-align: right;
+    right: 0;
+}
+
+.quote > span{
+    font-weight: 400;
+    position: relative;
+    right: 0;
+    top: 15px;
+}
+
+.quote > span > div{
+    height: 0%;
+    width: 20%;
+    border: none;
+    border-top: solid 1px black;
+    position: relative;
+    right: 2%;
+    top: 0%;
+    bottom: 3px;
+    display: inline-block;
+}
+
+.below-quote{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.below-quote > span{
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    width: 50%;
+    text-align: center;
+    bottom: 32%;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    font-size: smaller;
+}
+
+.columns-container
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+.columns
+{
+    width: 19.5%;
+    height: 100%;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, 0);
+    float: left;
+    padding: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.columns:nth-child(1), .columns:nth-child(4){
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.track-lines
+{
+    position: absolute;
+    top: 0;
+    height: 45px;
+    width: 0px;
+    z-index: 3;
+    opacity: .75;
+}
+
+.line-8
+{
+    animation: infiniscroll 2.5s infinite alternate -1.8s;
+    border: solid 5px gold;
+}
+
+.line-7
+{
+    animation: infiniscroll 2.5s infinite reverse -3.7s;
+    border: solid 1px rgba(255, 72, 0, 0);
+}
+
+.line-6
+{
+    animation: infiniscroll 2.3s infinite  -2.5s;
+    border: solid 1px rgb(0, 255, 98, 0);
+}
+
+.line-5
+{
+    animation: infiniscroll linear 6s infinite reverse -8s;
+    border: solid 1px rgb(0, 72, 255);
+}
+
+.line-4
+{
+    animation: infiniscroll 2.5s infinite -1s;
+    border: solid 1px rgb(255, 0, 255, 0);
+}
+
+.line-3
+{
+    animation: infiniscroll 2s infinite alternate -3s;
+    border: solid 1px rgba(0, 128, 0, 0);
+}
+
+.line-2
+{
+    animation: infiniscroll linear 6s infinite -5s;
+    border: 1px solid rgb(255, 0, 255);
+}
+
+.line-1
+{
+    animation: infiniscroll 2.7s infinite alternate;
+    animation-delay: -6s;
+    border: 1px solid rgba(255, 0, 0, 0);
+}
+
+/**layer 2**/
+.layer2
+{
+    z-index: 20;
+    display: none;
+}
+
+
+/**layer 3**/
+.layer3
+{
+    z-index: 30;
+    background-color: transparent;
+    position: absolute;
+}
+
+.mobile-header{
+    width: 100%;
+    height: 7%;
+    z-index: 4;
+    background-color: black;
+    position: fixed;
+    top: 0;
+}
+
+.mobile-footer{
+    width: 100%;
+    background-color: black;
+    padding: 2.5%;
+    bottom: 0;
+}
+
+.mobile-footer > span{
+    margin: 0 auto;
+    font-size: smaller;
+    padding: 2%;
+    color: white;
+    width: 50%;
+}
+
+.mobile-header > nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo
+{
+    display: block;
+    position: absolute;
+    top: 10.0%;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+#mobile-header-logo
+{
+    height: 55%;
+    width: 55%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0%;
+    bottom: 0%;
+}
+
+
+.menu-btn
+{
+    display: block;
+    position: absolute;
+    top: 27.2%;
+    right: 5%;
+    cursor: pointer;
+    padding: 0;
+    width: 10%;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding-bottom: 0px;
+    transition: ease-in .5s;
+}
+
+
+.menu-btn > ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-btn > ul > li
+{
+    margin-bottom: 7px;
+    padding: 0;
+    width: 80%;
+}
+
+
+.moving-bars
+{
+    height: 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: ease-in .5s;
+}
+
+.menu-btn > ul > li > span > b
+{
+    font-family: labtop;
+    font-size: 2vw;
+    color: white;
+    display: block;
+    position: relative;
+    width: 50%;
+    top: 5px;
+    left: 0;
+    transition: ease-in .7s;
+}
+
+.menu-btn:hover > ul > li > span > b
+{
+    color: rgb(0, 0, 0);
+    transition: ease-in .7s;
+}
+
+.bar-one
+{
+    width: 75%;
+    transition: ease-in .5s;
+}
+
+.bar-two
+{
+    width: 55%;
+    transition: ease-in .5s;
+}
+
+.bar-three
+{
+    width: 65%;
+    transition: ease-in .5s;
+}
+
+/**menu animation**/
+
+/**start**/
+
+.menu-btn:hover .bar-one
+{
+    animation: bars-1 .8s;
+    animation-delay: .7s;
+    transition: ease-in 1s;
+    border-color: white;
+}
+
+@keyframes bars-1
+{
+    0%
+    {
+        width: 60%;
+    }
+    20%
+    {
+        width: 45%;
+    }
+    40%
+    {
+        width: 50%;
+    }
+    60%
+    {
+        width: 70%;
+    }
+    80%
+    {
+        width: 35%;
+    }
+    100%
+    {
+        width: 60%;
+    }
+}
+
+.menu-btn:hover .bar-two
+{
+    animation: bars-2 1s;
+    animation-delay: .7s;
+    transition: ease-in 1s;
+    border-color: white;
+}
+
+@keyframes bars-2
+{
+    0%
+    {
+        width: 40%;
+    }
+    25%
+    {
+        width: 65%;
+    }
+    50%
+    {
+        width: 20%;
+    }
+    70%
+    {
+        width: 50%;
+    }
+    100%
+    {
+        width: 40%;
+    }
+}
+
+.menu-btn:hover .bar-three
+{
+    animation: bars-3 .8s;
+    animation-delay: .7s;
+    transition: ease-in 1s;
+    border-color: white;
+}
+
+@keyframes bars-3
+{
+    0%
+    {
+        width: 50%;
+    }
+    20%
+    {
+        width: 25%;
+    }
+    40%
+    {
+        width: 45%;
+    }
+    60%
+    {
+        width: 35%;
+    }
+    80%
+    {
+        width: 50%;
+    }
+    100%
+    {
+        width: 50%;
+    }
+}
+
+/**end**/
+/**menu animation**/
+
+@media only screen and (min-width: 320px) {
+    .quote{
+        top: 42%;
+        font-size: x-small;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    .quote{
+        top: 45%;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (min-width: 375px) and (min-height: 800px){
+    .quote{
+        top: 45%;
+        font-weight: 700;
+        font-size: .9rem;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .quote{
+        font-size: medium;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .quote{
+        top: 45%;
+    }
+}
+
+@media only screen and (min-width: 487px) {
+    .quote{
+        top: 50%;
+    }
+}
+
+@media only screen and (min-width: 487px) {
+    .quote{
+        top: 55%;
+        font-size: medium
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .logo
+    {
+        display: block;
+        position: absolute;
+        top: 1.0%;
+        margin-left: 40%;
+        margin-right: 40%;
+    }
+
+    #mobile-header-logo
+    {
+        height: 40%;
+        width: 40%;
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        top: 0%;
+        bottom: 0%;
+    }
+
+    .menu-btn{
+        width: 8%;
+    }
+
+    .columns:nth-child(1), .columns:nth-child(4){
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .quote{
+        top: 63%;
+        font-size: medium;
+    }
+} 
+
+@media only screen and (min-width: 650px) {
+    .quote{
+        top: 66%;
+        font-size: medium;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .menu-btn{
+        top: 33%;
+    }
+
+    .logo{
+        top: 15%;
+    }
+
+    .quote{
+        top: 60%;
+        font-size: larger;
+    }
+
+    .moving-bars
+    {
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+
+    .columns:nth-child(1), .columns:nth-child(4){
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .layer1, .layer3{
+        display: none;
+    }
+
+    .layer2{
+        background-color: white;
+        position: absolute;
+        z-index: 20;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-layer{
+        z-index: 21;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .col-1{
+        width: 60%;
+    }
+
+    .monitor-slideshow{
+        position: absolute;
+        top: 20%;
+        width: 70%;
+        height: 80%;
+    }
+
+    .desktop-monitor{
+        position: absolute;
+        z-index: 22;
+        width: 80%;
+        height: 80%;
+    }
+
+    .col-2{
+        width: 25%;
+    }
+
+    .text-container{
+        width: 100%; 
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .small-line{
+        height: 15%;
+        width: 20%;
+        border-left: solid black 2px;
+        position: absolute;
+        top: 13%;
+        right: 9%;
+    }
+
+    .circle{
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(0, 255, 255);
+        position: absolute;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .5s infinite linear alternate -2s;
+    }
+
+    .text{
+        font-family: dodge;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 40%;
+        width: 50%;
+    }
+
+    .text > span {
+        font-size: 10vh;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        transform: rotateZ(90deg);
+        transform-origin: center;
+        text-align: right;
+    }
+
+    .col-3{
+        width: 15%;
+    }
+
+    .desktop-menu-btn
+    {
+        display: block;
+        position: absolute;
+        top: 0.2%;
+        right: 5%;
+        cursor: pointer;
+        padding: 0;
+        width: 5%;
+        background-color: rgba(0, 0, 0, 0.0);
+        padding-bottom: 0px;
+        transition: ease-in .5s;
+    }
+
+
+    .desktop-menu-btn > ul
+    {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .desktop-menu-btn > ul > li
+    {
+        margin-bottom: 7px;
+        padding: 0;
+        width: 80%;
+    }
+
+
+    .desktop-moving-bars
+    {
+        height: 0;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        transition: ease-in .5s;
+    }
+
+    .desktop-menu-btn > ul > li > span > b
+    {
+        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+        font-size: 1.5vw;
+        color: black;
+        display: block;
+        position: relative;
+        width: 50%;
+        top: 5px;
+        left: 0;
+        transition: ease-in .7s;
+    }
+
+    .desktop-menu-btn:hover > ul > li > span > b
+    {
+        color: rgb(0, 0, 0);
+        transition: ease-in .7s;
+    }
+
+    .desktop-bar-one
+    {
+        width: 75%;
+        transition: ease-in .5s;
+    }
+
+    .desktop-bar-two
+    {
+        width: 55%;
+        transition: ease-in .5s;
+    }
+
+    .desktop-bar-three
+    {
+        width: 65%;
+        transition: ease-in .5s;
+    }
+
+    /**menu animation**/
+
+    /**start**/
+
+    .desktop-menu-btn:hover .desktop-bar-one
+    {
+        animation: bars-1 .8s;
+        animation-delay: .2s;
+        transition: ease-in 1s;
+        border-color: black;
+    }
+
+    @keyframes bars-1
+    {
+        0%
+        {
+            width: 60%;
+        }
+        20%
+        {
+            width: 70%;
+        }
+        40%
+        {
+            width: 50%;
+        }
+        60%
+        {
+            width: 70%;
+        }
+        80%
+        {
+            width: 35%;
+        }
+        100%
+        {
+            width: 75%;
+        }
+    }
+
+    .desktop-menu-btn:hover .desktop-bar-two
+    {
+        animation: bars-2 1s;
+        animation-delay: .2s;
+        transition: ease-in 1s;
+        border-color: black;
+    }
+
+    @keyframes bars-2
+    {
+        0%
+        {
+            width: 40%;
+        }
+        25%
+        {
+            width: 25%;
+        }
+        50%
+        {
+            width: 50%;
+        }
+        70%
+        {
+            width: 20%;
+        }
+        100%
+        {
+            width: 55%;
+        }
+    }
+
+    .desktop-menu-btn:hover .desktop-bar-three
+    {
+        animation: bars-3 .8s;
+        animation-delay: .2s;
+        transition: ease-in 1s;
+        border-color: black;
+    }
+
+    @keyframes bars-3
+    {
+        0%
+        {
+            width: 50%;
+        }
+        20%
+        {
+            width: 60%;
+        }
+        40%
+        {
+            width: 45%;
+        }
+        60%
+        {
+            width: 50%;
+        }
+        80%
+        {
+            width: 35%;
+        }
+        100%
+        {
+            width: 65%;
+        }
+    }
+
+    /**end**/
+    /**menu animation**/
+    
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {/*...*/}
