@@ -3,10 +3,20 @@
     font-family: dodge;
 }
 
+@font-face{
+    src: url('fonts/xirod/xirod.ttf');
+    font-family: xirod;
+}
+
 html, body{
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+.container{
+    display: none;
 }
 
 .layers{
@@ -582,7 +592,8 @@ html, body{
         background-color: white;
         position: absolute;
         z-index: 20;
-        display: block;
+        display: flex;
+        flex-direction: row;
         width: 100%;
         height: 100%;
     }
@@ -591,6 +602,7 @@ html, body{
         z-index: 21;
         display: flex;
         flex-direction: row;
+        width: 100%;
     }
 
     .col-1{
@@ -630,6 +642,7 @@ html, body{
         position: absolute;
         top: 13%;
         right: 9%;
+        z-index: 21;
     }
 
     .circle{
@@ -648,9 +661,11 @@ html, body{
         display: flex;
         flex-direction: column;
         position: absolute;
-        right: 0;
-        top: 40%;
+        right: 0%;
+        top: -10%;
         width: 50%;
+        height: 100%;
+        z-index: 20;
     }
 
     .text > span {
@@ -666,35 +681,55 @@ html, body{
 
     .col-3{
         width: 15%;
+        z-index: 23;
     }
 
     .desktop-menu-btn
     {
-        display: block;
+        display: flex;
+        flex-direction: row;
         position: absolute;
-        top: 0.2%;
-        right: 5%;
+        top: 5.2%;
+        right: 7%;
         cursor: pointer;
         padding: 0;
         width: 5%;
         background-color: rgba(0, 0, 0, 0.0);
         padding-bottom: 0px;
         transition: ease-in .5s;
+        z-index: 24;
     }
 
 
-    .desktop-menu-btn > ul
+    .desktop-menu-btn ul:first-child
     {
         list-style: none;
         padding: 0;
         margin: 0;
+        width: 70%;
+        transform: rotateY(180deg);
+        margin-right: 8%;
     }
 
-    .desktop-menu-btn > ul > li
+    .desktop-menu-btn ul:nth-child(2)
+    {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 30%;
+    }
+
+    .desktop-menu-btn ul > li
     {
         margin-bottom: 7px;
         padding: 0;
-        width: 80%;
+        width: 100%;
+    }
+
+    .desktop-menu-btn ul:nth-child(2) > li{
+        text-align: center;
+        font-size: 1.5vw;
+        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
     }
 
 
@@ -706,24 +741,7 @@ html, body{
         transition: ease-in .5s;
     }
 
-    .desktop-menu-btn > ul > li > span > b
-    {
-        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-        font-size: 1.5vw;
-        color: black;
-        display: block;
-        position: relative;
-        width: 50%;
-        top: 5px;
-        left: 0;
-        transition: ease-in .7s;
-    }
-
-    .desktop-menu-btn:hover > ul > li > span > b
-    {
-        color: rgb(0, 0, 0);
-        transition: ease-in .7s;
-    }
+   
 
     .desktop-bar-one
     {
@@ -853,6 +871,268 @@ html, body{
 
     /**end**/
     /**menu animation**/
+
+    .menu{
+        z-index: 26;
+        width: 40%;
+        height: 100%;
+        position: absolute;
+        background-color: teal;
+        right: -100%;
+        transition: linear 300ms;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-top, .menu-second, .menu-third, .menu-bottom{
+        width: 100%;
+        position: absolute;
+    }
+
+    .menu-top, .menu-bottom{
+        height: 10%;
+    }
+
+    .menu-bottom{
+        bottom: 0;
+    }
+
+    .menu-second{
+        height: 30%;
+        top: 10%;
+    }
+
+    .menu-third{
+        height: 50%;
+        top: 40%;
+    }
+
+    .menu-top > img {
+        position: absolute;
+        top: 30%;
+        right: 10%;
+        width: 7%;
+        height: 38%;
+        cursor: pointer;
+        transition: linear 300ms;
+        box-sizing: border-box;
+    }
+
+    /*
+    .menu-top > img:hover {
+        transform: rotateZ(180deg);
+        transition: linear 300ms;
+    }
+    */
+
+    .menu-second > ul {
+        list-style: none;
+        position: absolute;
+        left: 0;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .menu-second > ul > li{
+        padding: 2%;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .menu-second > ul li > a{
+        display: flex;
+        flex-direction: row;
+        color: white;
+        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        overflow: hidden;
+        width: 8%;
+        height: 8%;
+        transition: 300ms;
+    }
+
+    .menu-second > ul li > a > img {
+        width: 100%;
+        height: 100%;
+        transition: 300ms;
+    }
+
+    .menu-second > ul li > a > img:hover ~ .link-text{
+        transition: 300ms;
+        width: 20%;
+    }
+
+    .menu-second > ul li a > .link-text {
+        position: absolute;
+        top: 38%;
+        left: 12%;
+        width: 0%;
+        overflow: hidden;
+        transition: 300ms;
+    }
+
+    .menu-second > ul li a > .link-text:nth-child(2) {
+        position: absolute;
+        top: 39%;
+        left: 12%;
+        width: 0%;
+        overflow: hidden;
+        transition: 300ms;
+    }
+
+    .menu-second > ul li a > .link-text:nth-child(3) {
+        position: absolute;
+        top: 39%;
+        left: 12%;
+        width: 0%;
+        overflow: hidden;
+        transition: 300ms;
+    }
+
+    .menu-third > ul {
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        box-sizing: border-box;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        right: 0;
+    }
+
+    .menu-third > ul > li {
+        width: 100%;
+        padding: 5%;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .menu-third > ul > li > a {
+        width: 100%;
+        text-decoration: none;
+        font-family: dodge, 'Myraiad Pro', Arial, Helvetica, sans-serif;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menu-third > ul > li > a > span {
+        color: white;
+        text-decoration: none;
+        font-size: xx-large;
+        text-align: left;
+        position: absolute; 
+        left: 50%;
+        transition: 300ms;
+    }
+
+    .menu-third > ul > li > a > div {
+        width: 10%;
+        height: 0;
+        border: none;
+        border-top: rgb(255, 255, 255) solid 3px;
+        border-bottom: rgb(255, 255, 255) solid 3px;
+        position: absolute;
+        top: 84.5%;
+        right: 53%;
+        transition: 300ms;
+    }
+
+
+    .menu-third > ul > li > a:hover > div {
+        transition: 300ms;
+        width: 25%;
+        transform-origin: right;
+        border-top: rgb(0, 255, 255) solid 3px;
+        border-bottom: rgb(0, 255, 255) solid 3px;
+    }
+
+    .menu-third > ul > li > a:hover > span {
+        color: rgb(0, 255, 255)
+    }
+
+    .menu-bottom {
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        padding: 5%;
+    }
+
+    .menu-bottom > a {
+        position: absolute;
+        right: 5%;
+        width: 31%;
+        color: white;
+        font-size: medium;
+        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        padding: 2%; 
+        text-decoration: none;
+        transition: 300ms;
+    }
+
+    .menu-bottom > a:hover{
+        transition: 300ms;
+        color: rgb(0, 255, 255);
+    }
+
+    .menu-bottom > a > img{
+        width: 12%;
+        height: 52%;
+        position: absolute;
+        right: 94%;
+    }
+
+    .nextPage{
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+        height: 5%;
+        padding: 1%;
+        box-sizing: border-box;
+        z-index: 24;
+    }
+
+    .nextPage:hover{
+        cursor: pointer;
+    }
+
+    .nextPage > a{
+        position: absolute;
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nextPage:hover > a > div{
+        cursor: pointer;
+        width: 6%;
+        left: 6%;
+        transition: 300ms;
+    }
+
+    .nextPage > a > span{
+        color: rgb(0, 160, 160);
+        font-size: medium;
+        position: absolute;
+    }
+
+    .nextPage > a > div{
+        width: 5%;
+        height: 0;
+        border: none;
+        border-top: rgb(0, 160, 160) solid 1px;
+        border-bottom: rgb(0, 160, 160) solid 1px;
+        top: 8px;
+        left: 5%;
+        position: absolute;
+        transition: 300ms;
+    }
     
 } 
 
