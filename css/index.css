@@ -291,6 +291,7 @@ html, body{
     background-color: rgba(0, 0, 0, 0.0);
     padding-bottom: 0px;
     transition: ease-in .5s;
+    z-index: 33;
 }
 
 
@@ -464,6 +465,216 @@ html, body{
 
 /**end**/
 /**menu animation**/
+
+.mobile-menu{
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    background-color: teal;
+    z-index: 35;
+    display: none;
+}
+
+.mobile-menu-top, .mobile-menu-second, .mobile-menu-third, .mobile-menu-bottom{
+    width: 100%;
+    position: absolute;
+}
+
+.mobile-menu-top, .mobile-menu-bottom{
+    height: 10%;
+}
+
+.mobile-menu-bottom{
+    bottom: 0;
+}
+
+.mobile-menu-second{
+    height: 30%;
+    top: 10%;
+}
+
+.mobile-menu-third{
+    height: 50%;
+    top: 40%;
+}
+
+.mobile-menu-top > img {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 8%;
+    height: 38%;
+    cursor: pointer;
+    transition: linear 300ms;
+    box-sizing: border-box;
+}
+
+/*
+.mobile-menu-top > img:hover {
+    transform: rotateZ(180deg);
+    transition: linear 300ms;
+}
+*/
+
+.mobile-menu-second > ul {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.mobile-menu-second > ul > li{
+    padding: 2%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.mobile-menu-second > ul li > a{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+    width: 10%;
+    height: 10%;
+    transition: 300ms;
+}
+
+.mobile-menu-second > ul li > a > img {
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.mobile-menu-second > ul li > a > img:hover ~ .link-text{
+    transition: 300ms;
+    width: 20%;
+}
+
+.mobile-menu-second > ul li a > .link-text {
+    position: absolute;
+    top: 38%;
+    left: 12%;
+    width: 0%;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.mobile-menu-second > ul li a > .link-text:nth-child(2) {
+    position: absolute;
+    top: 39%;
+    left: 12%;
+    width: 0%;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.mobile-menu-second > ul li a > .link-text:nth-child(3) {
+    position: absolute;
+    top: 39%;
+    left: 12%;
+    width: 0%;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.mobile-menu-third > ul {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    bottom: 20%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    right: 0;
+}
+
+.mobile-menu-third > ul > li {
+    width: 100%;
+    padding: 10%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.mobile-menu-third > ul > li > a {
+    width: 100%;
+    text-decoration: none;
+    font-family: dodge, 'Myraiad Pro', Arial, Helvetica, sans-serif;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.mobile-menu-third > ul > li > a > span {
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    text-align: left;
+    position: absolute; 
+    left: 40%;
+    transition: 300ms;
+}
+
+.mobile-menu-third > ul > li > a > div {
+    width: 10%;
+    height: 0;
+    border: none;
+    border-top: rgb(255, 255, 255) solid 2px;
+    border-bottom: rgb(255, 255, 255) solid 2px;
+    position: absolute;
+    top: 68.5%;
+    right: 63%;
+    transition: 300ms;
+}
+
+
+.mobile-menu-third > ul > li > a:hover > div {
+    transition: 300ms;
+    width: 25%;
+    transform-origin: right;
+    border-top: rgb(0, 255, 255) solid 3px;
+    border-bottom: rgb(0, 255, 255) solid 3px;
+}
+
+.mobile-menu-third > ul > li > a:hover > span {
+    color: rgb(0, 255, 255)
+}
+
+.mobile-menu-bottom {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+.mobile-menu-bottom > a {
+    position: absolute;
+    right: 5%;
+    width: 41%;
+    color: white;
+    font-size: medium;
+    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    padding: 2%; 
+    text-decoration: none;
+    transition: 300ms;
+}
+
+.mobile-menu-bottom > a:hover{
+    transition: 300ms;
+    color: rgb(0, 255, 255);
+}
+
+.mobile-menu-bottom > a > img{
+    width: 12%;
+    height: 52%;
+    position: absolute;
+    right: 98%;
+}
+
 
 @media only screen and (min-width: 320px) {
     .quote{
