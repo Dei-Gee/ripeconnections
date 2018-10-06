@@ -9,7 +9,7 @@
         <meta name="keywords" content="Social Media, Advertising, Marketing, Vancouver" />
         <link rel="icon" href="css/images/icons/favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" media="screen"  type="text/css" href="css/index.css" />
+        <link rel="stylesheet" media="screen"  type="text/css" href="css/contactus.css" />
     </head>
     <body>
         <div class="container">
@@ -39,24 +39,53 @@
                 </div>
 
                 <div class="above-columns">
-                    <div class="mobile-monitor-slideshow">
-                        <img class="bg-img" src="css/images/hands-woman-laptop-notebook.jpg" />
-                        <img class="mobile-monitor" src="css/images/monitor.png" />
-                        <section class="quote">
-                            "Ripe Connections is a great team whose <br />
-                            primary concern is bringing our customers' <br />
-                            vision to life on our platform. <br />
-                            &nbsp;<br />
-                            Attention to detail and commitment to the <br />
-                            satisfaction of our customers is of paramount <br />
-                            importance to us"
-                            <br />
-                            <span>
-                                <div></div>Andrew Hinds<br />
-                                Director of Social Media
-                            </span>
-                        </section>
-
+                    <div class="contact-form-layer">
+                        <div class="form">
+                            <form class="contactform" method="POST" action="php/sendemail.php" name="emailform" id="cForm">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <h1 class="tfhead">Reach out to us</h1>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tableBody">
+                                        <tr>
+                                            <td>
+                                                <label>Name</label>
+                                            </td>
+                                            <td>
+                                                <input required="required" type="text" name="cName" placeholder="Enter your name" />
+                                            </td>
+                                        </tr>
+            
+                                        <tr>
+                                            <td>
+                                                <label>Email</label>
+                                            </td>
+                                            <td>
+                                                <input required="required" type="email" name="cEmail" placeholder="Enter your email address" />
+                                            </td>
+                                        </tr>
+            
+                                        <tr>
+                                            <td>
+                                                <label>Message</label>
+                                            </td>
+                                            <td>
+                                                <textarea required="required" name="cMessage" form="cForm" placeholder="Enter message here..." wrap="hard" cols="30" rows="5"></textarea>
+                                            </td>
+                                        </tr>
+            
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <input class="submitBTN" type="submit" name="submit" value="Send Message" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
                         <section class="below-quote">
                             <span>
                                 &copy; 2018 Ripe Connections
@@ -70,19 +99,45 @@
             <div class="layers layer2">
                 <div class="main-layer">
                     <div class="col-1">
-                        <div class="monitor-slideshow">
-                            <img class="desktop-monitor" src="css/images/monitor.png" />
+                        <div class="form">
+                            <div class="contactform">
+                                
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-2">
                         <div class="text-container">
-                            <div class='small-line'>
+                            <div class='small-line line-one'>
                                 <div class='circle'></div>
                             </div>
 
-                            <div class="text">
-                                <span>Social Media<br />Marketing</span>
+                            <div class='small-line line-two'>
+                                <div class='circle'></div>
+                            </div>
+
+                            <div class='small-line line-three'>
+                                <div class='circle'></div>
+                            </div>
+
+                            <div class='small-line line-four'>
+                                <div class='circle'></div>
+                            </div>
+
+                            <div class='small-line line-five'>
+                                <div class='circle'></div>
+                            </div>
+
+                            <div class='small-line line-six'>
+                                <div class='circle'></div>
+                            </div>
+
+                            <div class='small-line line-seven'>
+                                <div class='circle'></div>
+                            </div>
+
+                            <div class='small-line line-eight'>
+                                <div class='circle'></div>
                             </div>
                         </div>
                     </div>
@@ -108,8 +163,8 @@
                         </div>
 
                         <div class="nextPage">
-                            <a id="nextpage" href="portfolio.html">
-                                <span>Portfolio </span>
+                            <a id="nextpage" href="contactus.html">
+                                <span>Contact Us </span>
                                 <div></div>
                             </a>
                         </div>
@@ -143,6 +198,13 @@
                     <div class="menu-third">
                         <ul>
                             <li>
+                                <a href="index.html">
+                                    <div></div>
+                                    <span>HOME</span>
+                                </a>
+                            </li>
+
+                            <li>
                                 <a href="portfolio.html">
                                     <div></div>
                                     <span>PORTFOLIO</span>
@@ -153,13 +215,6 @@
                                 <a href="services.html">
                                     <div></div>
                                     <span>SERVICES</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="aboutus.html">
-                                    <div></div>
-                                    <span>ABOUT US</span>
                                 </a>
                             </li>
 
@@ -227,6 +282,13 @@
                         <div class="mobile-menu-third">
                             <ul>
                                 <li>
+                                    <a href="index.html">
+                                        <div></div>
+                                        <span>HOME</span>
+                                    </a>
+                                </li>
+
+                                <li>
                                     <a href="portfolio.html">
                                         <div></div>
                                         <span>PORTFOLIO</span>
@@ -237,13 +299,6 @@
                                     <a href="services.html">
                                         <div></div>
                                         <span>SERVICES</span>
-                                    </a>
-                                </li>
-    
-                                <li>
-                                    <a href="aboutus.html">
-                                        <div></div>
-                                        <span>ABOUT US</span>
                                     </a>
                                 </li>
     

@@ -55,59 +55,20 @@ html, body{
     z-index: 2;
 }
 
-.mobile-monitor-slideshow{
+.contact-form-layer{
     width: 100%;
     position: absolute;
-    top: 15%;
+    top: 25%;
     height: 100%;
     background-color: transparent;
-}
-
-.bg-img{
-    width: 90%;
-    position: absolute;
-    height: auto;
-    top: 0%;
-    bottom: 70%;
-    left: 5%;
-    right: 5%;
-}
-
-.mobile-monitor{
-    width: 100%;
-    position: absolute;
-}
-
-.quote{
-    font-weight: 900;
-    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-    font-size: 1.5vh;
-    position: absolute;
-    top: 40%;
     box-sizing: border-box;
-    padding: 7%;
-    text-align: right;
-    right: 0;
+    padding: 5%;
 }
 
-.quote > span{
-    font-weight: 400;
-    position: relative;
-    right: 0;
-    top: 15px;
+.form {
+
 }
 
-.quote > span > div{
-    height: 0%;
-    width: 20%;
-    border: none;
-    border-top: solid 1px black;
-    position: relative;
-    right: 2%;
-    top: 0%;
-    bottom: 3px;
-    display: inline-block;
-}
 
 .below-quote{
     position: absolute;
@@ -677,50 +638,31 @@ html, body{
 
 
 @media only screen and (min-width: 320px) {
-    .quote{
-        top: 45%;
-        font-size: x-small;
-    }
+    
 }
 
 @media only screen and (min-width: 375px) {
-    .quote{
-        top: 45%;
-        font-weight: 700;
-    }
+    
 }
 
 @media only screen and (min-width: 375px) and (min-height: 800px){
-    .quote{
-        top: 42%;
-        font-weight: 700;
-        font-size: .9rem;
-    }
+    
 }
 
 @media only screen and (min-width: 400px) {
-    .quote{
-        font-size: medium;
-    }
+    
 }
 
 @media only screen and (min-width: 425px) {
-    .quote{
-        top: 45%;
-    }
+    
 }
 
 @media only screen and (min-width: 487px) {
-    .quote{
-        top: 50%;
-    }
+    
 }
 
 @media only screen and (min-width: 487px) {
-    .quote{
-        top: 55%;
-        font-size: medium
-    }
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -753,19 +695,11 @@ html, body{
     .columns:nth-child(1), .columns:nth-child(4){
         border-right: 1px solid rgba(0, 0, 0, 0.2);
     }
-
-    .quote{
-        top: 63%;
-        font-size: medium;
-    }
 } 
 
 
 @media only screen and (min-width: 640px) {
-    .quote{
-        top: 66%;
-        font-size: medium;
-    }
+    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -776,11 +710,6 @@ html, body{
 
     .logo{
         top: 15%;
-    }
-
-    .quote{
-        top: 60%;
-        font-size: larger;
     }
 
     .moving-bars
@@ -821,30 +750,15 @@ html, body{
         width: 60%;
     }
 
-    .monitor-slideshow{
-        position: absolute;
-        top: 20%;
-        width: 70%;
-        height: 80%;
-    }
-
-    .desktop-monitor{
-        position: absolute;
-        z-index: 22;
-        width: 80%;
-        height: 80%;
-    }
-
     .col-2{
         width: 25%;
     }
 
     .text-container{
         width: 100%; 
-        height: 100%;
+        height: 90%;
         margin: 0 auto;
         display: flex;
-        flex-direction: column;
     }
 
     .small-line{
@@ -852,12 +766,15 @@ html, body{
         width: 20%;
         border-left: solid black 2px;
         position: absolute;
-        top: 13%;
-        right: 9%;
         z-index: 21;
     }
 
-    .circle{
+    .line-one{
+        top: 23%;
+        right: 9%;
+    }
+
+    .line-one .circle{
         width: .8vh;
         height: .8vh;
         border-radius: 50%;
@@ -865,30 +782,196 @@ html, body{
         position: absolute;
         left: -4px;
         z-index: 22;
-        animation: infiniscroll .5s infinite linear alternate -2s;
+        animation: infiniscroll .4s infinite linear alternate -2s;
     }
 
-    .text{
-        font-family: dodge;
-        display: flex;
-        flex-direction: column;
+    .line-two{
+        top: 28%;
+        right: 15%;
+    }
+
+    .line-two > .circle {
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(255, 0, 0);
         position: absolute;
-        right: 0%;
-        top: -10%;
-        width: 50%;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .5s infinite linear alternate-reverse -3s;
+    }
+
+    .line-three{
+        top: 48%;
+        right: 12%;
+    }
+
+    .line-three > .circle {
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(0, 255, 0);
+        position: absolute;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .4s infinite linear alternate;
+    }
+
+    .line-four{
+        top: 40%;
+        right: 5%;
+    }
+
+    .line-four > .circle {
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(162, 0, 255);
+        position: absolute;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .7s infinite linear alternate -1s;
+    }
+
+    .line-five{
+        top: 43%;
+        right: 20%;
+    }
+
+    .line-five > .circle {
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(255, 94, 0);
+        position: absolute;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .4s infinite linear alternate-reverse -2s;
+    }
+
+    .line-six{
+        top: 28%;
+        right: 26%;
+    }
+
+    .line-six > .circle {
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(255, 251, 0);
+        position: absolute;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .4s infinite linear alternate-reverse -3s;
+    }
+
+    .line-seven{
+        top: 14%;
+        right: 20%;
+    }
+
+    .line-seven > .circle {
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(0, 153, 8);
+        position: absolute;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .7s infinite linear alternate -2s;
+    }
+
+    .line-eight{
+        top: 48%;
+        right: 30%;
+    }
+
+    .line-eight > .circle {
+        width: .8vh;
+        height: .8vh;
+        border-radius: 50%;
+        background-color: rgb(0, 214, 214);
+        position: absolute;
+        left: -4px;
+        z-index: 22;
+        animation: infiniscroll .4s infinite linear alternate-reverse -1s;
+    }
+
+    .form{
+        width: 100%;
         height: 100%;
-        z-index: 20;
+        padding: 5%;
+        box-sizing: border-box;
     }
 
-    .text > span {
-        font-size: 10vh;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        display: block;
-        transform: rotateZ(90deg);
-        transform-origin: center;
-        text-align: right;
+    .contactform{
+        border-left: solid 10px black;
+        padding: 5%;
+        box-sizing: border-box;
+        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
+        width: 100%;
+        height: 100%;
+    }
+
+    .contactform table{
+        width: 80%;
+        height: 80%;
+    }
+
+    .contactform label{
+        font-weight: bold;
+        font-size: larger;
+    }
+
+    .tableBody tr{
+        width: 100%;
+    }
+
+    .tableBody tr td{
+        padding: 1%;
+    }
+
+    .tableBody tr td:nth-child(1){
+        width: 25%;
+    }
+
+    .tableBody tr td:nth-child(2){
+        width: 75%;
+        padding-right: 8%;
+    }
+
+    .tableBody tr td input {
+        padding: 5%;
+        border: 2px solid black;
+        width: 90%;
+    }
+
+    .tableBody tr td textarea {
+        padding: 5px;
+        border: 2px solid black;
+        resize: none;
+        width: 100%;
+    }
+
+    .submitBTN{
+        width: 20%;
+        color: white;
+        background-color: black;
+        padding: 1%;
+        cursor: pointer;
+        transition: 300ms;
+        font-size: 1.95vh;
+    }
+
+    .submitBTN:hover{
+        transition: 300ms;
+        background-color: rgb(0, 255, 255);
+        color: black;
+        border-color: rgb(0, 255, 255);
+    }
+
+    .submitBTN:nth-child(2){
+        margin-left: 5%;
     }
 
     .col-3{
@@ -1349,11 +1432,6 @@ html, body{
 } 
 
 @media only screen and (min-width: 1024px) {
-    .text span{
-        font-size: 9vh;
-        right: 4%;
-    }
-
     .nextPage > a > div {
         left: 6%;
     }
@@ -1375,14 +1453,6 @@ html, body{
         height: 42%;
     }
     
-    .text{
-        right: 6%;
-    }
-
-    .small-line{
-        right: 13%;
-    }
-
     .nextPage > a > div {
         left: 5%;
     }
@@ -1399,14 +1469,6 @@ html, body{
 
 
 @media only screen and (min-width: 1440px) {
-    .text{
-        right: 8%;
-    }
-
-    .small-line{
-        right: 9%;
-    }
-
     .desktop-monitor{
         width: 70%;
         left: 3%;
@@ -1414,19 +1476,6 @@ html, body{
 }
 
 @media only screen and (min-width: 2560px) {
-    .text{
-        right: 10%;
-    }
-
-    .small-line{
-        right: 7%;
-    }
-
-    .desktop-monitor{
-        width: 60%;
-        left: 10%;
-    }
-
     .desktop-menu-btn ul > li
     {
         margin-bottom: 17px;
@@ -1450,31 +1499,9 @@ html, body{
 }
 
 @media only screen and (min-width: 2560px) and (min-height: 1440px){
-    .text{
-        right: 7%;
-    }
-
-    .small-line{
-        right: 10%;
-    }
-
-    .desktop-monitor{
-        width: 75%;
-        left: 5%;
-    }
+    
 }
 
 @media only screen and (min-width: 2560px) and (min-height: 1600px){
-    .text{
-        right: 7%;
-    }
-
-    .small-line{
-        right: 12%;
-    }
-
-    .desktop-monitor{
-        width: 75%;
-        left: 5%;
-    }
+    
 }
