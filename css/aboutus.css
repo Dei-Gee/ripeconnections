@@ -13,8 +13,6 @@ html, body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    position: fixed;
-    min-height: 100%;
 }
 
 .container{
@@ -60,89 +58,15 @@ html, body{
 .contact-form-layer{
     width: 100%;
     position: absolute;
-    top: 10%;
+    top: 25%;
     height: 100%;
     background-color: transparent;
     box-sizing: border-box;
-    padding: 2%;
+    padding: 5%;
 }
 
-.contact-form-layer .form{
-    width: 100%;
-    height: 100%;
-    padding: 0%;
-    box-sizing: border-box;
-}
+.form {
 
-.contact-form-layer .contactform{
-    padding: 2%;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 100%;
-}
-
-.contact-form-layer .contactform table{
-    width: 100%;
-    height: 60%;
-}
-
-.contact-form-layer .contactform label{
-    font-weight: bold;
-    font-size: medium;
-}
-
-.contact-form-layer .tableBody tr{
-    width: 100%;
-}
-
-.contact-form-layer .tableBody tr td{
-    padding: 0;
-}
-
-.contact-form-layer .tableBody tr td:nth-child(1){
-    width: 20%;
-}
-
-.contact-form-layer .tableBody tr td:nth-child(2){
-    width: 80%;
-    padding: 0;
-    padding-left: 0%;
-}
-
-.contact-form-layer .tableBody tr td input {
-    padding: 2%;
-    border: 2px solid black;
-    width: 90%;
-}
-
-.contact-form-layer .tableBody tr td textarea {
-    padding: 2px;
-    border: 2px solid black;
-    resize: none;
-    width: 90%;
-}
-
-.contact-form-layer .submitBTN{
-    width: 20%;
-    color: white;
-    background-color: black;
-    padding: .5%;
-    cursor: pointer;
-    transition: 300ms;
-    font-size: 1.95vh;
-}
-
-.contact-form-layer .submitBTN:hover{
-    transition: 300ms;
-    background-color: rgb(0, 255, 255);
-    color: black;
-    border-color: rgb(0, 255, 255);
-}
-
-.contact-form-layer .submitBTN:nth-child(2){
-    margin-left: 5%;
 }
 
 
@@ -980,7 +904,7 @@ html, body{
         box-sizing: border-box;
     }
 
-    .contactform{
+    .aboutDIV{
         border-left: solid 10px black;
         padding: 5%;
         box-sizing: border-box;
@@ -989,65 +913,14 @@ html, body{
         height: 100%;
     }
 
-    .contactform table{
+    .about-info{
+        padding: 2%;
+        box-sizing: border-box;
         width: 80%;
-        height: 80%;
     }
 
-    .contactform label{
-        font-weight: bold;
-        font-size: larger;
-    }
-
-    .tableBody tr{
-        width: 100%;
-    }
-
-    .tableBody tr td{
-        padding: 1%;
-    }
-
-    .tableBody tr td:nth-child(1){
-        width: 25%;
-    }
-
-    .tableBody tr td:nth-child(2){
-        width: 75%;
-        padding-right: 8%;
-    }
-
-    .tableBody tr td input {
-        padding: 5%;
-        border: 2px solid black;
-        width: 90%;
-    }
-
-    .tableBody tr td textarea {
-        padding: 5px;
-        border: 2px solid black;
-        resize: none;
-        width: 100%;
-    }
-
-    .submitBTN{
-        width: 20%;
-        color: white;
-        background-color: black;
-        padding: 1%;
-        cursor: pointer;
-        transition: 300ms;
-        font-size: 1.95vh;
-    }
-
-    .submitBTN:hover{
-        transition: 300ms;
-        background-color: rgb(0, 255, 255);
-        color: black;
-        border-color: rgb(0, 255, 255);
-    }
-
-    .submitBTN:nth-child(2){
-        margin-left: 5%;
+    .about-info > span{
+        font-family: 'Myriad Pro', Arial, Helvetica, sans-serif;
     }
 
     .col-3{
@@ -1483,7 +1356,7 @@ html, body{
     .nextPage:hover > a > div{
         cursor: pointer;
         width: 6%;
-        left: 6%;
+        left: 8%;
         transition: 300ms;
     }
 
@@ -1500,7 +1373,7 @@ html, body{
         border-top: rgb(0, 160, 160) solid 1px;
         border-bottom: rgb(0, 160, 160) solid 1px;
         top: 8px;
-        left: 5%;
+        left: 7%;
         position: absolute;
         transition: 300ms;
     }
@@ -1509,11 +1382,11 @@ html, body{
 
 @media only screen and (min-width: 1024px) {
     .nextPage > a > div {
-        left: 6%;
+        left: 7%;
     }
 
     .nextPage > a:hover > div {
-        left: 7%;
+        left: 8%;
     }
 
     .menu-third > ul
@@ -1530,11 +1403,11 @@ html, body{
     }
     
     .nextPage > a > div {
-        left: 5%;
+        left: 6%;
     }
 
     .nextPage > a:hover > div {
-        left: 6%;
+        left: 7%;
     }
 
     .menu-third > ul
